@@ -1,6 +1,4 @@
-﻿using Cobranca.Domain.Entities;
-using System.ComponentModel.DataAnnotations;
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 
 namespace Cobranca.Service.DTO
 {

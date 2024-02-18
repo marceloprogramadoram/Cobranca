@@ -19,30 +19,54 @@ namespace Cobranca.Api.Controllers
         [HttpPost]
         public async Task<ActionResult> Save([FromBody]BancoDTO banco)
         {
-            var result = await _bancoService.CadastrarBanco(banco);
-            return Ok(result);
+            try
+            {
+                var result = await _bancoService.CadastrarBanco(banco);
+                return Ok(result);
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+            
         }
 
         [HttpGet("all")]
         public async Task<ActionResult<List<BancoDTO>>> GetAll()
         {
-            var result = await _bancoService.ListarBancos();
-            if (result.Count == 0)
+            try
             {
-                return NotFound();
+                var result = await _bancoService.ListarBancos();
+                if (result.Count == 0)
+                {
+                    return NotFound();
+                }
+                return Ok(result);
             }
-            return Ok(result);
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+            
         }
 
         [HttpGet("{key}")]
         public async Task<ActionResult<List<BancoDTO>>> GetByCodeBank(int key)
         {
-            var result = await _bancoService.LocalizarBanco(key);
-            if (result == null)
+            try
             {
-                return NotFound();
+                var result = await _bancoService.LocalizarBanco(key);
+                if (result == null)
+                {
+                    return NotFound();
+                }
+                return Ok(result);
             }
-            return Ok(result);
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+            
         }
     }
 }

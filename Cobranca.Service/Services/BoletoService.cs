@@ -58,7 +58,7 @@ namespace Cobranca.Service.Services
 
         private bool ValidaCampos(BoletoDTO boleto)
         {
-            if (string.IsNullOrEmpty(boleto.NomePagador)) return false;
+            if (string.IsNullOrEmpty(boleto.NomePagador)) throw new Exception("Nome do Pagador é obrigatório.");
 
             if ( string.IsNullOrEmpty(boleto.CpfCnpjPagador) ) return false;
 

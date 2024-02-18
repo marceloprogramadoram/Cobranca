@@ -20,21 +20,37 @@ namespace Cobranca.Api.Controllers
         [HttpPost]
         public async Task<ActionResult> Save([FromBody] BoletoDTO boleto)
         {
-            var result = _boletoService.SalvarBoleto(boleto);
+            try
+            {
+                var result = _boletoService.SalvarBoleto(boleto);
 
-            return Ok(result);
+                return Ok(result);
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+           
         }
 
 
         [HttpGet("{key}")]
         public async Task<ActionResult<List<BoletoDTO>>> GetByCodeBank(int key)
         {
-            var result = await _boletoService.LocalizarBoleto(key);
-            if (result == null)
+            try
             {
-                return NotFound();
+                var result = await _boletoService.LocalizarBoleto(key);
+                if (result == null)
+                {
+                    return NotFound();
+                }
+                return Ok(result);
             }
-            return Ok(result);
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+
         }
     }
 }
