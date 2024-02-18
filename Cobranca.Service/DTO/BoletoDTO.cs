@@ -14,6 +14,7 @@ namespace Cobranca.Service.DTO
         public DateTime DataVencimento { get; set; }
         public string Observacao { get; set; }
         public int BancoId { get; set; }
+        [JsonIgnore]
         public BancoDTO? Banco { get; set; }
 
     }

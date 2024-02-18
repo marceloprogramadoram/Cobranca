@@ -10,6 +10,7 @@ namespace Cobranca.Service.DTO
         public string Nome { get; set; }
         public int Codigo { get; set; }
         public float PercJuros { get; set; }
+        [JsonIgnore]
         public List<BoletoDTO>? ListBoleto { get; set; }
     }
 }

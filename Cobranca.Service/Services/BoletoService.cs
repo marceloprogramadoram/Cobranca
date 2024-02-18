@@ -32,7 +32,7 @@ namespace Cobranca.Service.Services
         {
             var result = await _boletoRepository.LocalizarBoleto(id);
 
-            var banco = await _bancoRepository.LocalizarBanco(result.Banco.Codigo);
+            var banco = await _bancoRepository.GetById(result.BancoId);
 
             if (result == null)
             {
