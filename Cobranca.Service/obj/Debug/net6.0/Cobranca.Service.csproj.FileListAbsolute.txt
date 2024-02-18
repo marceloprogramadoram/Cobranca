@@ -1,0 +1,17 @@
+C:\Estudos\Cobranca\Cobranca.Service\bin\Debug\net6.0\Cobranca.Service.deps.json
+C:\Estudos\Cobranca\Cobranca.Service\bin\Debug\net6.0\Cobranca.Service.dll
+C:\Estudos\Cobranca\Cobranca.Service\bin\Debug\net6.0\Cobranca.Service.pdb
+C:\Estudos\Cobranca\Cobranca.Service\bin\Debug\net6.0\Cobranca.Domain.dll
+C:\Estudos\Cobranca\Cobranca.Service\bin\Debug\net6.0\Cobranca.InfraStructure.dll
+C:\Estudos\Cobranca\Cobranca.Service\bin\Debug\net6.0\Cobranca.InfraStructure.pdb
+C:\Estudos\Cobranca\Cobranca.Service\bin\Debug\net6.0\Cobranca.Domain.pdb
+C:\Estudos\Cobranca\Cobranca.Service\obj\Debug\net6.0\Cobranca.Service.csproj.AssemblyReference.cache
+C:\Estudos\Cobranca\Cobranca.Service\obj\Debug\net6.0\Cobranca.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Estudos\Cobranca\Cobranca.Service\obj\Debug\net6.0\Cobranca.Service.AssemblyInfoInputs.cache
+C:\Estudos\Cobranca\Cobranca.Service\obj\Debug\net6.0\Cobranca.Service.AssemblyInfo.cs
+C:\Estudos\Cobranca\Cobranca.Service\obj\Debug\net6.0\Cobranca.Service.csproj.CoreCompileInputs.cache
+C:\Estudos\Cobranca\Cobranca.Service\obj\Debug\net6.0\Cobranca.Service.csproj.CopyComplete
+C:\Estudos\Cobranca\Cobranca.Service\obj\Debug\net6.0\Cobranca.Service.dll
+C:\Estudos\Cobranca\Cobranca.Service\obj\Debug\net6.0\refint\Cobranca.Service.dll
+C:\Estudos\Cobranca\Cobranca.Service\obj\Debug\net6.0\Cobranca.Service.pdb
+C:\Estudos\Cobranca\Cobranca.Service\obj\Debug\net6.0\ref\Cobranca.Service.dll

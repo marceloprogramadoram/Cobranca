@@ -1,0 +1,11 @@
+C:\Estudos\Cobranca\Cobranca.Domain\bin\Debug\net6.0\Cobranca.Domain.deps.json
+C:\Estudos\Cobranca\Cobranca.Domain\bin\Debug\net6.0\Cobranca.Domain.dll
+C:\Estudos\Cobranca\Cobranca.Domain\bin\Debug\net6.0\Cobranca.Domain.pdb
+C:\Estudos\Cobranca\Cobranca.Domain\obj\Debug\net6.0\Cobranca.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Estudos\Cobranca\Cobranca.Domain\obj\Debug\net6.0\Cobranca.Domain.AssemblyInfoInputs.cache
+C:\Estudos\Cobranca\Cobranca.Domain\obj\Debug\net6.0\Cobranca.Domain.AssemblyInfo.cs
+C:\Estudos\Cobranca\Cobranca.Domain\obj\Debug\net6.0\Cobranca.Domain.csproj.CoreCompileInputs.cache
+C:\Estudos\Cobranca\Cobranca.Domain\obj\Debug\net6.0\Cobranca.Domain.dll
+C:\Estudos\Cobranca\Cobranca.Domain\obj\Debug\net6.0\refint\Cobranca.Domain.dll
+C:\Estudos\Cobranca\Cobranca.Domain\obj\Debug\net6.0\Cobranca.Domain.pdb
+C:\Estudos\Cobranca\Cobranca.Domain\obj\Debug\net6.0\ref\Cobranca.Domain.dll
