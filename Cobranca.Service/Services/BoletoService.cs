@@ -30,15 +30,17 @@ namespace Cobranca.Service.Services
 
         public async Task<BoletoDTO> LocalizarBoleto(int id)
         {
-            var result =  await _boletoRepository.LocalizarBoleto(id);
+            var result = await _boletoRepository.LocalizarBoleto(id);
 
             var banco = await _bancoRepository.LocalizarBanco(result.Banco.Codigo);
 
-            if (result == null) {
+            if (result == null)
+            {
                 return null;
             }
 
-            if(result.DataVencimento > DateTime.Now) {
+            if (result.DataVencimento > DateTime.Now)
+            {
                 result.Valor += result.Valor * banco.PercJuros;
             }
 
@@ -47,8 +49,30 @@ namespace Cobranca.Service.Services
 
         public async Task SalvarBoleto(BoletoDTO boleto)
         {
-            var bol = _mapper.Map<Boleto>(boleto);
-            await _boletoRepository.SalvarBoleto(bol);
+            if (ValidaCampos(boleto))
+            {
+                var bol = _mapper.Map<Boleto>(boleto);
+                await _boletoRepository.SalvarBoleto(bol);
+            }
+        }
+
+        private bool ValidaCampos(BoletoDTO boleto)
+        {
+            if (string.IsNullOrEmpty(boleto.NomePagador)) return false;
+
+            if ( string.IsNullOrEmpty(boleto.CpfCnpjPagador) ) return false;
+
+            if (string.IsNullOrEmpty(boleto.NomeBeneficiario)) return false;
+
+            if (string.IsNullOrEmpty(boleto.CpfCnpjBeneficiario)) return false;
+
+            if ( boleto.Valor == 0 ) return false;
+
+            if (boleto.DataVencimento == null) return false;
+
+            if (boleto.BancoId == 0) return false;
+
+            return true;
         }
     }
 }

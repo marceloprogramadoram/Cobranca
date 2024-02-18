@@ -18,10 +18,13 @@ namespace Cobranca.Service.Services
 
         public async Task<int> CadastrarBanco(BancoDTO banco)
         {
-            var _banco = _mapper.Map<Banco>(banco);
+            if (ValidaCampos(banco))
+            {
+                var _banco = _mapper.Map<Banco>(banco);
 
-            return await _bancoRepository.Salvar(_banco);
-
+                return await _bancoRepository.Salvar(_banco);
+            }
+            return 0;
         }
 
         public async Task<List<BancoDTO>> ListarBancos()
@@ -29,8 +32,9 @@ namespace Cobranca.Service.Services
             var lista = await _bancoRepository.GetAll();
 
             var result = new List<BancoDTO>();
-            
-            lista.ToList().ForEach( x => {
+
+            lista.ToList().ForEach(x =>
+            {
                 var item = _mapper.Map<BancoDTO>(x);
                 result.Add(item);
             });
@@ -43,6 +47,17 @@ namespace Cobranca.Service.Services
             var banco = await _bancoRepository.LocalizarBanco(codigoBanco);
 
             return _mapper.Map<BancoDTO>(banco);
+        }
+
+        private bool ValidaCampos(BancoDTO banco)
+        {
+            if (string.IsNullOrEmpty(banco.Nome)) return false;
+
+            if (banco.Codigo == 0) return false;
+
+            if (banco.PercJuros == 0) return false;
+
+            return true;
         }
     }
 }
